@@ -16,14 +16,8 @@ def my_chat():
 
 def my_file(book, audiofile):
     text_speech = pyttsx3.init()
-    # lst = []
     file = open(book, 'r')
-
-    # txt = file.read().split('. ')
 
     txt = file.read()
     text_speech.save_to_file(txt, audiofile)
     text_speech.runAndWait()
-
-    # for line in txt:
-    #     lst.append(repr(line).strip("'"))
